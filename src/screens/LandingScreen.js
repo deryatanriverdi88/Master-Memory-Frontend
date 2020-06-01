@@ -1,14 +1,20 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, TextInput, StyleSheet, Button } from 'react-native'
 
 export default class LandingScreen extends Component {
     render() {
         return (
             <View>
-                <Text> textInComponent </Text>
-                <Text> I should show the login page </Text>
-                <Text> and a button for sign up </Text>
+                <Text style={styles.login}> Login </Text>
+                <Button title="Dont have an Account? Sign up here!" />
             </View>
         )
     }
 }
+
+const styles = StyleSheet.create({
+    login: {
+        fontSize: 20,
+        fontWeight: "bold"
+    }
+  })
