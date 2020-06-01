@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import LandingScreen from './src/screens/LandingScreen';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello</Text>
+      <LandingScreen/>
+      {/* <Text>Hello</Text> */}
     </View>
   );
 }
