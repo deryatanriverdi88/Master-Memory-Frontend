@@ -5,9 +5,8 @@ export default class LandingScreen extends Component {
     render() {
         return (
             <View>
-                <Text> textInComponent </Text>
-                <Text> I should show the login page </Text>
-                <Text> and a button for sign up </Text>
+                <Text style={styles.login}> Login </Text>
+                <Button title="Dont have an Account? Sign up here!" />
             </View>
         )
     }
