@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, TextInput, StyleSheet, Button } from 'react-native'
 
 export default class LandingScreen extends Component {
     render() {
