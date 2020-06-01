@@ -11,3 +11,10 @@ export default class LandingScreen extends Component {
         )
     }
 }
+
+const styles = StyleSheet.create({
+    login: {
+        fontSize: 20,
+        fontWeight: "bold"
+    }
+  })
