@@ -9,6 +9,7 @@ export default class LandingScreen extends Component {
             <View>
                 <Text style={styles.login}> Login </Text>
                 <LoginForm />
+                <SignUpForm />
                 <Button title="Dont have an Account? Sign up here!" />
             </View>
         )
