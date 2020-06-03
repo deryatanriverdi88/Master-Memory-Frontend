@@ -33,9 +33,22 @@ const styles = StyleSheet.create({
     },
     form: {
         borderColor: "black",
-        borderWidth: 1
+        borderWidth: 1,
+        paddingTop: 10,
+        paddingBottom: 10
     },
     label: {
-        marginLeft: 5
+        marginLeft: 15
+    },
+    button:{
+        borderWidth: 1,
+        borderColor: "red",
+        width: "30%",
+        alignSelf: "center",
+        borderRadius: 10
+    },
+    buttonText:{
+        textAlign: "center"
     }
+
 })
