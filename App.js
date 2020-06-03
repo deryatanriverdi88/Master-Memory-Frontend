@@ -3,8 +3,11 @@ import { NavigationContainer } from "@react-navigation/native"
 import { createStackNavigator } from "@react-navigation/stack"
 import LandingScreen from './src/screens/LandingScreen';
 import SignUpForm from './src/components/SignUpForm'
+import {Linking} from 'expo'
 
 const Stack = createStackNavigator()
+
+const prefix = Linking.makeUrl('/')
 
 export default function App() {
   return (

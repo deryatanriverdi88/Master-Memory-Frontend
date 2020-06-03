@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Button, TextInput, StyleSheet } from 'react-native'
+import { View, Text, Button, TextInput, StyleSheet, TouchableOpacity } from 'react-native'
 import { Formik } from 'formik'
 
 const LoginForm = ({navigate}) => {
@@ -23,10 +23,11 @@ const LoginForm = ({navigate}) => {
                         onChangeText={handleChange('password')}
                         secureTextEntry={true}
                     />
-                    <Button
-                        title="Submit"
-                        onPress={handleSubmit}
-                    />
+                    <TouchableOpacity
+                        style={styles.button}
+                        onPress={handleSubmit}>
+                        <Text style={styles.buttonText}>Submit</Text>
+                    </TouchableOpacity>
                 </View>
               )}
             </Formik>
@@ -47,9 +48,22 @@ const styles = StyleSheet.create({
     },
     form: {
         borderColor: 'black',
-        borderWidth: 1
+        borderWidth: 1,
+        paddingTop: 10,
+        paddingBottom: 10
     },
     label: {
         marginLeft: 5
+    },
+    button:{
+        borderWidth: 1,
+        borderColor: "red",
+        width: "30%",
+        alignSelf: "center",
+        borderRadius: 10
+    },
+    buttonText:{
+        textAlign: "center"
     }
+
   })
