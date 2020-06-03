@@ -20,3 +20,18 @@ export default class SignUpForm extends Component {
         )
     }
 }
+
+const styles = StyleSheet.create({
+    input:{
+        margin: 15,
+        padding: 5,
+        borderWidth: 1
+    },
+    form: {
+        borderColor: "black",
+        borderWidth: 1
+    },
+    label: {
+        marginLeft: 5
+    }
+})
