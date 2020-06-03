@@ -3,13 +3,18 @@ import { NavigationContainer } from "@react-navigation/native"
 import { createStackNavigator } from "@react-navigation/stack"
 import { StyleSheet, Text, View } from 'react-native';
 import LandingScreen from './src/screens/LandingScreen';
+import SignUp from './src/Components/SignUpForm'
+
+const Stack = createStackNavigator()
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <LandingScreen/>
-      {/* <Text>Hello</Text> */}
-    </View>
+   <NavigationContainer>
+     <Stack.Navigator initialRouteName="landing">
+       <Stack.Screen component={LandingScreen} name="landing"/>
+       <Stack.Screen component={SignUpForm} name="signUp"/>
+     </Stack.Navigator>
+   </NavigationContainer>
   );
 }
 
