@@ -8,7 +8,6 @@ export default class LandingScreen extends Component {
             <View>
                 <Text style={styles.login}> Login </Text>
                 <LoginForm navigate={this.props.navigation.navigate}/>
-                {/* <SignUpForm /> */}
             </View>
         )
     }
