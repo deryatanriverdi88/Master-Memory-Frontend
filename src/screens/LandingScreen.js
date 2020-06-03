@@ -1,17 +1,17 @@
-import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
 import LoginForm from '../components/LoginForm'
 
-export default class LandingScreen extends Component {
-    render() {
-        return (
-            <View>
-                <Text style={styles.login}> Login </Text>
-                <LoginForm navigate={this.props.navigation.navigate}/>
-            </View>
-        )
-    }
+const LandingScreen = ({navigation}) => {
+    return (
+        <View>
+            <Text style={styles.login}> Login </Text>
+            <LoginForm navigate={navigation.navigate}/>
+        </View>
+    )
 }
+
+export default LandingScreen
 
 const styles = StyleSheet.create({
     login: {
