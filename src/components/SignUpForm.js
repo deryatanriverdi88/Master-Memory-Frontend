@@ -1,21 +1,25 @@
 import React, { Component } from 'react'
-import { Text, TextInput, View, StyleSheet, Button } from 'react-native'
+import { Text, TextInput, View, StyleSheet, TouchableOpacity } from 'react-native'
 import { Formik } from 'formik'
 
 export default class SignUpForm extends Component {
     render() {
         return (
-          <View>
-              <Text>Name:</Text>
-              <TextInput/>
-              <Text>Age:</Text>
-              <TextInput/>
-              <Text>Username:</Text>
-              <TextInput/>
-              <Text>Email:</Text>
-              <TextInput/>
-              <Text>Password:</Text>
-              <TextInput/>
+          <View style={styles.form}>
+              <Text style={styles.label}>Name:</Text>
+              <TextInput style={styles.input}/>
+              <Text style={styles.label}>Age:</Text>
+              <TextInput style={styles.input}/>
+              <Text style={styles.label}>Username:</Text>
+              <TextInput style={styles.input}/>
+              <Text style={styles.label}>Email:</Text>
+              <TextInput style={styles.input}/>
+              <Text style={styles.label}>Password:</Text>
+              <TextInput style={styles.input}/>
+              <TouchableOpacity
+                style={styles.button}>
+                    <Text style={styles.buttonText}>Submit</Text>
+                </TouchableOpacity>
           </View>
         )
     }
