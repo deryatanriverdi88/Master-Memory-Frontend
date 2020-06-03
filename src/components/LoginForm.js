@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Button, TextInput, StyleSheet } from 'react-native'
+import { View, Text, Button, TextInput, StyleSheet, TouchableOpacity } from 'react-native'
 import { Formik } from 'formik'
 
 const LoginForm = ({navigate}) => {
