@@ -6,7 +6,16 @@ export default class SignUpForm extends Component {
     render() {
         return (
           <View>
-              <Text>Sign Up Page</Text>
+              <Text>Name:</Text>
+              <TextInput/>
+              <Text>Age:</Text>
+              <TextInput/>
+              <Text>Username:</Text>
+              <TextInput/>
+              <Text>Email:</Text>
+              <TextInput/>
+              <Text>Password:</Text>
+              <TextInput/>
           </View>
         )
     }
