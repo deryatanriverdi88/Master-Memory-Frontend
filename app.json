@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "Master-Memory-Mobile",
+    "scheme": "masterMemory",
     "slug": "Master-Memory-Mobile",
     "platforms": [
       "ios",
