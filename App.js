@@ -17,12 +17,13 @@ const store = createStore(rootReducer, applyMiddleware(thunk))
 
 export default function App() {
   return (
-   <NavigationContainer>
-     <Stack.Navigator initialRouteName="Login">
-       <Stack.Screen component={LandingScreen} name="Login"/>
-       <Stack.Screen component={SignUpForm} name="Sign Up"/>
-     </Stack.Navigator>
-   </NavigationContainer>
+    <Provider store={store}>
+        <NavigationContainer>
+          <Stack.Navigator initialRouteName="Login">
+            <Stack.Screen component={LandingScreen} name="Login"/>
+            <Stack.Screen component={SignUpForm} name="Sign Up"/>
+          </Stack.Navigator>
+        </NavigationContainer>
+    </Provider>
   );
 }
-
