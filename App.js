@@ -4,6 +4,10 @@ import { createStackNavigator } from "@react-navigation/stack"
 import LandingScreen from './src/screens/LandingScreen';
 import SignUpForm from './src/components/SignUpForm'
 import {Linking} from 'expo'
+import thunk from 'redux-thunk'
+import {Provider} from 'react-redux'
+import {createStore, applyMiddleware} from 'redux'
+import rootReducer from './src/redux/reducers/rootReducer'
 
 const Stack = createStackNavigator()
 
