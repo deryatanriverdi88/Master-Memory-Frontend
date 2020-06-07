@@ -13,6 +13,8 @@ const Stack = createStackNavigator()
 
 const prefix = Linking.makeUrl('/')
 
+const store = createStore(rootReducer, applyMiddleware(thunk))
+
 export default function App() {
   return (
    <NavigationContainer>
