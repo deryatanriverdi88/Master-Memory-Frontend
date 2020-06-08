@@ -17,6 +17,16 @@ const prefix = Linking.makeUrl('/')
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
 
+const initialRoute = () => {
+  if (AsyncStorage.getItem('token')){
+    return "Home"
+  }
+  else {
+    return "Login"
+  }
+}
+
+
 export default function App() {
   return (
     <Provider store={store}>
