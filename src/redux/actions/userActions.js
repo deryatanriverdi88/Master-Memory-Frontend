@@ -43,15 +43,49 @@ const newUserToDB = userObj => dispatch => {
     })
 }
 
-// const persistUser = () => dispatch => {
-//     const config = {
-//         method: 'GET',
-//         headers: {
-//             "Authorization": 
-//         } 
-//     }
-// }
+const loginUserToDB = (userCredentials, navigation) => dispatch => {
+    const config = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(userCredentials)
+    }
+    fetch(LOGIN_URL, config)
+    .then(res => res.json())
+    .then(data => {
+        // console.log(data)
+        if(data.error){
+            // console.log(data.error)
+            dispatch(setErrorAction(data.error))
+        } else{
+            AsyncStorage.setItem('token', JSON.stringify(data.token))
+            AsyncStorage.setItem('id', JSON.stringify(data.user.id))
+            // AsyncStorage.getItem('token', (err, result) => {
+            // console.log(result)})
+            dispatch(setUserAction(data.user))
+            navigation.navigate('Home')
+        }
+    })
+}
+
+const persistUser = () => dispatch => {
+    // const config = {
+    //     method: 'GET',
+    //     headers: {
+    //         "Authorization":
+    //     }
+    // }
+    // fetch(PERSIST_URL, config)
+    // .then(res => res.json())
+    // .then(userInstance => {
+    //     console.log('persist', userInstance)
+    //     dispatch(setUserAction(userInstance))
+    // })
+}
 
 export default {
-    newUserToDB
+    newUserToDB,
+    loginUserToDB,
+    persistUser
 }
