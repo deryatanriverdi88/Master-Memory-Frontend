@@ -1,6 +1,8 @@
 import React from 'react'
 import { View, Text, Button, TextInput, StyleSheet, TouchableOpacity } from 'react-native'
 import { Formik } from 'formik'
+import { useDispatch } from 'react-redux'
+import userActions from '../redux/actions/userActions'
 
 const LoginForm = ({navigate}) => {
     return (
