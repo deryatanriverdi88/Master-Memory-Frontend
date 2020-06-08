@@ -10,7 +10,9 @@ const LoginForm = ({navigation}) => {
         <View>
             <Formik
             initialValues={{username:'', password:''}}
-            onSubmit={(values) => console.log('submitted', values)}>
+            onSubmit = {(values) => {
+            dispatch(userActions.loginUserToDB(values, navigation))
+            }}>
               {({handleChange, handleSubmit, values})=> (
                 <View style={styles.form}>
                     <Text style={styles.label}>Username:</Text>
