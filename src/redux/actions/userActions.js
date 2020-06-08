@@ -38,7 +38,7 @@ const newUserToDB = userObj => dispatch => {
             console.log("user saved", "user:", data.user, "token:", data.token)
             AsyncStorage.setItem('token', JSON.stringify(data.token))
             AsyncStorage.setItem('id', JSON.stringify(data.user.id))
-           AsyncStorage.getItem('token', (err, result) => {
+            AsyncStorage.getItem('token', (err, result) => {
             console.log(result)})
             dispatch(setUserAction(data.user))
         }
