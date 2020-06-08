@@ -4,7 +4,8 @@ import { Formik } from 'formik'
 import { useDispatch } from 'react-redux'
 import userActions from '../redux/actions/userActions'
 
-const LoginForm = ({navigate}) => {
+const LoginForm = ({navigation}) => {
+    const dispatch = useDispatch()
     return (
         <View>
             <Formik
