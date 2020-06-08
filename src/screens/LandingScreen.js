@@ -17,8 +17,11 @@ const LandingScreen = ({navigation}) => {
 
     return (
         <View>
-            <Text style={styles.login}> Login </Text>
-            <LoginForm navigate={navigation.navigate}/>
+        {!current_user.id ?
+            // <Text style={styles.login}> Login </Text>
+            <LoginForm navigation={navigation}/> :
+            <HomeScreen currentUser={current_user}/>
+        }
         </View>
     )
 }
