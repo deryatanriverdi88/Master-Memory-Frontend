@@ -7,6 +7,14 @@ import userActions from '../redux/actions/userActions'
 
 
 const LandingScreen = ({navigation}) => {
+    const dispatch = useDispatch()
+    useEffect(() => dispatch(userActions.persistUser()), [] )
+
+    const current_user = useSelector(state => {
+        console.log( "landing", state.currentUser.user)
+        return state.currentUser.user
+    })
+
     return (
         <View>
             <Text style={styles.login}> Login </Text>
