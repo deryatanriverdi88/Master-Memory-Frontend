@@ -3,7 +3,6 @@ import { Text, TextInput, View, StyleSheet, TouchableOpacity, Button } from 'rea
 import { Formik } from 'formik'
 import {useDispatch} from "react-redux"
 import userActions from "../redux/actions/userActions"
-import {AsyncStorage} from 'react-native'
 
 const SignUpForm = ({navigation}) => {
     const dispatch = useDispatch()

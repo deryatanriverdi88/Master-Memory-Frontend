@@ -2,5 +2,5 @@ import {combineReducers} from 'redux'
 import currentUserReducer from './currentUserReducer'
 
 export default combineReducers({
-    currentUserReducer
+    currentUser: currentUserReducer
 })

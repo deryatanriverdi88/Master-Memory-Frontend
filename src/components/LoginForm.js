@@ -1,13 +1,18 @@
 import React from 'react'
 import { View, Text, Button, TextInput, StyleSheet, TouchableOpacity } from 'react-native'
 import { Formik } from 'formik'
+import { useDispatch } from 'react-redux'
+import userActions from '../redux/actions/userActions'
 
-const LoginForm = ({navigate}) => {
+const LoginForm = ({navigation}) => {
+    const dispatch = useDispatch()
     return (
         <View>
             <Formik
             initialValues={{username:'', password:''}}
-            onSubmit={(values) => console.log('submitted', values)}>
+            onSubmit = {(values) => {
+            dispatch(userActions.loginUserToDB(values, navigation))
+            }}>
               {({handleChange, handleSubmit, values})=> (
                 <View style={styles.form}>
                     <Text style={styles.label}>Username:</Text>
@@ -32,7 +37,7 @@ const LoginForm = ({navigate}) => {
               )}
             </Formik>
             <Button
-            onPress={() => navigate("Sign Up")}
+            onPress={() => navigation.navigate("Sign Up")}
             title="Dont have an Account? Sign up here!" />
         </View>
     )

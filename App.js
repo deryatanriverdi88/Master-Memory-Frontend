@@ -17,21 +17,12 @@ const prefix = Linking.makeUrl('/')
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
 
-const initialRoute = () => {
-  if (AsyncStorage.getItem('token')){
-    return "Home"
-  }
-  else {
-    return "Login"
-  }
-}
-
-
 export default function App() {
+
   return (
     <Provider store={store}>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName={initialRoute()}>
+          <Stack.Navigator initialRouteName={"Login"}>
             <Stack.Screen component={LandingScreen} name="Login"/>
             <Stack.Screen component={SignUpForm} name="Sign Up"/>
             <Stack.Screen component={HomeScreen} name="Home"/>
