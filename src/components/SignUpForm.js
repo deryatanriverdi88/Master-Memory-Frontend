@@ -17,7 +17,7 @@ const SignUpForm = ({navigation}) => {
                         password: ""}}
         onSubmit={(values) => {
             dispatch(userActions.newUserToDB(values))
-
+            navigation.navigate('Home')
         }}>
             {({handleChange, handleSubmit, values}) => (
             <View style={styles.form}>
