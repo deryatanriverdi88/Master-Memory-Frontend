@@ -32,18 +32,15 @@ const newUserToDB = userObj => dispatch => {
     .then(res => res.json())
     .then(data => {
         if (data.errors){
-            console.log(data.errors)
             dispatch(setErrorAction(data.errors))
         } else{
-            console.log("user saved", "user:", data.user, "token:", data.token)
             AsyncStorage.setItem('token', JSON.stringify(data.token))
             AsyncStorage.setItem('id', JSON.stringify(data.user.id))
-            AsyncStorage.getItem('token', (err, result) => {
-            console.log(result)})
+            // AsyncStorage.getItem('token', (err, result) => {
+            // console.log(result)})
             dispatch(setUserAction(data.user))
         }
     })
-    // console.log(userObj)
 }
 
 // const persistUser = () => dispatch => {
