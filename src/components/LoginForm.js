@@ -37,7 +37,7 @@ const LoginForm = ({navigation}) => {
               )}
             </Formik>
             <Button
-            onPress={() => navigate("Sign Up")}
+            onPress={() => navigation.navigate("Sign Up")}
             title="Dont have an Account? Sign up here!" />
         </View>
     )
